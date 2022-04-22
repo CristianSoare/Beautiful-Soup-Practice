@@ -1,9 +1,22 @@
 from bs4 import BeautifulSoup #import beautiful soup library
 import requests #import requests library
 
+print('''
+
+
+░░░░░██╗░█████╗░██████╗░  ███████╗██╗███╗░░██╗██████╗░███████╗██████╗░
+░░░░░██║██╔══██╗██╔══██╗  ██╔════╝██║████╗░██║██╔══██╗██╔════╝██╔══██╗
+░░░░░██║██║░░██║██████╦╝  █████╗░░██║██╔██╗██║██║░░██║█████╗░░██████╔╝
+██╗░░██║██║░░██║██╔══██╗  ██╔══╝░░██║██║╚████║██║░░██║██╔══╝░░██╔══██╗
+╚█████╔╝╚█████╔╝██████╦╝  ██║░░░░░██║██║░╚███║██████╔╝███████╗██║░░██║
+░╚════╝░░╚════╝░╚═════╝░  ╚═╝░░░░░╚═╝╚═╝░░╚══╝╚═════╝░╚══════╝╚═╝░░╚═╝
+
+
+''')
+
 position = input('What is your position search query? ') #requests keyword to use in job search
 location = input('What is your location? ') #requests location
-sortby= input('Would you like to format data by relevance or posting date? (R/D)')
+sortby= input('Would you like to format data by relevance or posting date? (R/D)') #requests the type of results the user desires
 
 if sortby=='R' or sortby=='r':
     url = 'https://www.reed.co.uk/jobs/'+position+'-jobs-in-'+location #forms the url using the requested variables and sorts for most relevant postings
